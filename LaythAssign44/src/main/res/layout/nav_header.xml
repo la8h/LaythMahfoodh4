@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+              android:layout_height="192dp"
+              android:background="?attr/colorPrimaryDark"
+              android:padding="16dp"
+              android:theme="@style/ThemeOverlay.AppCompat.Dark"
+              android:orientation="vertical"
+              android:gravity="bottom">
+
+
+    <TextView
+        android:id="@+id/laythTV"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:text="Assignment4  header"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="174dp"
+        android:layout_height="73dp"
+        app:srcCompat="@drawable/ic_baseline_live_help_24" />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<!-- Layth Mahfoodh s991523983 PROG38448 -->
+
+<resources>
+    <string name="app_name">Layth Mahfoodh s991523983</string>
+    <string name="camera">Display Ad</string>
+    <string name="gallery">Canada</string>
+    <string name="slideshow">Login</string>
+    <string name="tools">Map</string>
+    <string name="Renew">Renew</string>
+    <string name="Options">Options</string>
+    <string name="Optins2">Default</string>
+    <string name="Optins3">Live Help</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
+   <!-- <string name="start_level">Level 1</string> -->
+    <string name="next_level">Next Level</string>
+    <string name="level_text">Level %1$d</string>
+    <!-- -
+    This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+    For more information, see https://support.google.com/admob/answer/3052638
+<!- -->
+       <!--<string name="interstitial_ad_unit_id">YOUR_INTERSTITIAL_AD_UNIT_ID</string> -->
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="my_name">Layth Mahfoodh</string>
+    <string name="s_num">S991523983</string>
+
+
+    <string name="prompt">Choose a province</string>
+
+    <string-array name="provinces">
+        <item>Select Image</item>
+        <item>British Columbia</item>
+        <item>Alberta</item>
+        <item>Quebec</item>
+
+     <!--   <item>image </item> -->
+
+    </string-array>
+
+
+</resources>

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 /*
@@ -23,7 +21,6 @@ Layth Mahfoodh s991523983 PROG38448
  */
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
@@ -40,7 +37,7 @@ public class LaythActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //set default fragment
-        loadFragment(new CameraFragment());
+        loadFragment(new HomeFrag());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); // to have the drawer sliding when click on ic_menu
@@ -75,7 +72,7 @@ public class LaythActivity extends AppCompatActivity {
                         Class fragmentClass = null;
                         switch (menuItem.getItemId()) {
                             case R.id.nav_camera: // display ad
-                                fragmentClass = CameraFragment.class;
+                                fragmentClass = HomeFrag.class;
                                 break;
                             case R.id.nav_gallery: // canada
                                 fragmentClass = GalleryFragment.class;

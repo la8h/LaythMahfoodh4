@@ -24,7 +24,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class CameraFragment extends Fragment {
+public class HomeFrag extends Fragment {
     // Remove the below line after defining your own ad unit ID.
     private static final String TOAST_TEXT = "Test ads are being shown. "
             + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
@@ -48,21 +48,57 @@ public class CameraFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_camera, container, false);
+        return inflater.inflate(R.layout.frag_home, container, false);
+
+
+
+
+
+
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        dateTime = (TextView) view.findViewById(R.id.date_time);
+
+ Thread t = new Thread() {
+
+    @Override
+    public void run() {
+
+        try{
+         while(!isInterrupted()) {
+             Thread.sleep(1000);
+
+             getActivity().runOnUiThread(new Runnable() {
+                 @Override
+                 public void run() {
 
 
-        //add date
-        dateTime = (TextView)view.findViewById(R.id.date_time);
-        calendar = Calendar.getInstance();
-        dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+                     //add date
+                  //   dateTime = (TextView) view.findViewById(R.id.date_time);
+                     calendar = Calendar.getInstance();
 
-        date = dateFormat.format(calendar.getTime());
-        dateTime.setText(date);
+                     long date = System.currentTimeMillis();
+
+                     dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+
+                     String dateDisplay = dateFormat.format(date);
+                     //  date = dateFormat.format(calendar.getTime());
+                     dateTime.setText(dateDisplay);
+
+                 }
+             });
+         }
+              } catch (InterruptedException e) {
+        }
+    }
+};
+   t.start();
+
+
 
 
         // Create the next level button, which tries to show an interstitial when clicked.
@@ -92,6 +128,15 @@ public class CameraFragment extends Fragment {
         // Toasts the test ad message on the screen.
         // Remove this after defining your own ad unit ID.
         Toast.makeText(appContext, TOAST_TEXT, Toast.LENGTH_LONG).show();
+
+
+
+
+
+
+
+
+
     }
 
     private InterstitialAd newInterstitialAd(final Context context) {

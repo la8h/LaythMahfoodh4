@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical"
+    android:background="@color/light_pink"
+    tools:context=".LaythActivity"
+    >
+
+    <TextView
+        android:id="@+id/laythTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather_and_other_information" />
+
+    <EditText
+        android:id="@+id/txtLat"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:hint="@string/enter_zip_code"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        />
+
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude" />
+
+    <EditText
+        android:id="@+id/txtLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="-79.387054"  /> -->
+
+    <Button
+        android:id="@+id/btnWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/web_services"
+       />
+
+    <TextView
+        android:id="@+id/txtDisplayWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+</LinearLayout>

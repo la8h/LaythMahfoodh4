@@ -62,7 +62,7 @@ public class HomeFrag extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         dateTime = (TextView) view.findViewById(R.id.date_time);
-
+/*
  Thread t = new Thread() {
 
     @Override
@@ -76,7 +76,7 @@ public class HomeFrag extends Fragment {
                  @Override
                  public void run() {
 
-
+*/
                      //add date
                   //   dateTime = (TextView) view.findViewById(R.id.date_time);
                      calendar = Calendar.getInstance();
@@ -88,8 +88,8 @@ public class HomeFrag extends Fragment {
                      String dateDisplay = dateFormat.format(date);
                      //  date = dateFormat.format(calendar.getTime());
                      dateTime.setText(dateDisplay);
-
-                 }
+        {
+ /*
              });
          }
               } catch (InterruptedException e) {
@@ -97,8 +97,9 @@ public class HomeFrag extends Fragment {
     }
 };
    t.start();
+*/
 
-
+        }
 
 
         // Create the next level button, which tries to show an interstitial when clicked.

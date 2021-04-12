@@ -75,10 +75,10 @@ public class LaythActivity extends AppCompatActivity {
                                 fragmentClass = HomeFrag.class;
                                 break;
                             case R.id.nav_gallery: // canada
-                                fragmentClass = GalleryFragment.class;
+                                fragmentClass = DownloadFrag.class;
                                 break;
                             case R.id.nav_manage: // Map
-                                fragmentClass = MessageFragment.class;
+                                fragmentClass = WebServiceFrag.class;
                                 break;
                             default:
                                 fragmentClass = LoginFragment.class;

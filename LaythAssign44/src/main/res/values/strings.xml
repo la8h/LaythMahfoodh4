@@ -2,10 +2,10 @@
 
 <resources>
     <string name="app_name">Layth Mahfoodh s991523983</string>
-    <string name="camera">Display Ad</string>
-    <string name="gallery">Canada</string>
+ <!--   <string name="camera">Display Ad</string> -->
+<!--    <string name="gallery">Canada</string> -->
     <string name="slideshow">Login</string>
-    <string name="tools">Map</string>
+ <!--   <string name="tools">Map</string> -->
     <string name="Renew">Renew</string>
     <string name="Options">Options</string>
     <string name="Optins2">Default</string>
@@ -34,8 +34,15 @@
     <string name="my_name">Layth Mahfoodh</string>
     <string name="s_num">S991523983</string>
 
+    <string name="enter_zip_code">Enter ZIP code</string>
+    <string name="web_services">Web Services</string>
+    <string name="weather_and_other_information">Weather and other information:</string>
+
 
     <string name="prompt">Choose a province</string>
+    <string name="home_page">Home Page</string>
+    <string name="download_page">Download page</string>
+    <string name="webservice_page">WebService page</string>
 
     <string-array name="provinces">
         <item>Select Image</item>

@@ -1,19 +1,13 @@
 package layth.mahfoodh.s991523983;
 
-import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 /*
@@ -27,30 +21,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 //import com.google.android.gms.location.LocationRequest;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link GalleryFragment#newInstance} factory method to
+ * Use the {@link DownloadFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public  class GalleryFragment extends Fragment{ //} implements OnMapReadyCallback{
+public  class DownloadFrag extends Fragment{ //} implements OnMapReadyCallback{
 
     URL ImageUrl = null;
     InputStream is = null;
@@ -147,7 +129,7 @@ public  class GalleryFragment extends Fragment{ //} implements OnMapReadyCallbac
     private String mParam1;
     private String mParam2;
 
-    public GalleryFragment() {
+    public DownloadFrag() {
         // Required empty public constructor
     }
 
@@ -160,8 +142,8 @@ public  class GalleryFragment extends Fragment{ //} implements OnMapReadyCallbac
      * @return A new instance of fragment GalleryFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static GalleryFragment newInstance(String param1, String param2) {
-        GalleryFragment fragment = new GalleryFragment();
+    public static DownloadFrag newInstance(String param1, String param2) {
+        DownloadFrag fragment = new DownloadFrag();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -183,7 +165,7 @@ public  class GalleryFragment extends Fragment{ //} implements OnMapReadyCallbac
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+        View view = inflater.inflate(R.layout.frag_download, container, false);
 
         final Spinner spin = (Spinner) view.findViewById(R.id.provinces_spinner);
         //create a button object

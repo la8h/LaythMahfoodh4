@@ -6,6 +6,8 @@ package layth.mahfoodh.s991523983;
 
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 
 //import android.support.v7.app.AppCompatActivity;
@@ -88,6 +90,18 @@ public class WebServiceFrag extends Fragment {
        final  Button submitWeather  = (Button)view.findViewById(R.id.btnWeather);
         txtLat = (EditText)view.findViewById(R.id.txtLat);
     //    latitude = txtLat.getText().toString();
+
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage("Enter a Name")
+                .setTitle("Mandatory field ex.");
+
+        builder.setView(view);
+
+
+
+
         submitWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,31 +113,30 @@ public class WebServiceFrag extends Fragment {
                 //    txtLong = (EditText)findViewById(R.id.txtLong);
               latitude = txtLat.getText().toString();
                 //  String longitude = txtLong.getText().toString();
+if(latitude.isEmpty()&& latitude.length()<5){
+    txtLat.setError("Wrong entery!!");
+}
+else {
+    //get weather information using geo coordinates
+    //this method calls OpenWeatherMap API
+    //
+    //create the URL to call JSON service
+    //"http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=13f04464b7119837cf1dc4fa8b39caa3");
 
-                //get weather information using geo coordinates
-                //this method calls OpenWeatherMap API
-                //
-                //create the URL to call JSON service
-                //"http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=13f04464b7119837cf1dc4fa8b39caa3");
+    String url = "https://api.openweathermap.org/data/2.5/weather?";
 
-                String url = "https://api.openweathermap.org/data/2.5/weather?";
-
-                url+="zip="+latitude;
-                //   url+="lat="+latitude;
-                //  url+="&lon="+longitude;
-
-
-                url+="&appid=23f04464b7119837cf1dc4fa8b39caa3"; //from OpenWeatherMap website
-                Log.d("URL",url);
-                new ReadJSONFeedTask().execute(url);
-                //new ReadJSONFeedTask().execute(
-                //        "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=13f04464b7119837cf1dc4fa8b39caa3");
+    url += "zip=" + latitude;
+    //   url+="lat="+latitude;
+    //  url+="&lon="+longitude;
 
 
+    url += "&appid=23f04464b7119837cf1dc4fa8b39caa3"; //from OpenWeatherMap website
+    Log.d("URL", url);
+    new ReadJSONFeedTask().execute(url);
+    //new ReadJSONFeedTask().execute(
+    //        "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=13f04464b7119837cf1dc4fa8b39caa3");
 
-
-
-
+}
             }
 
 
@@ -160,6 +173,12 @@ public class WebServiceFrag extends Fragment {
         new ReadJSONFeedTask().execute(url);
         //new ReadJSONFeedTask().execute(
         //        "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=13f04464b7119837cf1dc4fa8b39caa3");
+
+
+
+
+
+
 
 
     }

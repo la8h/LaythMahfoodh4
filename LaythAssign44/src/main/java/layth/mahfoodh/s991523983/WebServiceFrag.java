@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONStringer;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -224,6 +225,7 @@ else {
                 //Uncomment the two rows below to parse weather data from OpenWeatherMap
                 JSONObject weatherJson = new JSONObject(result);
                 JSONArray dataArray1= weatherJson.getJSONArray("weather");
+
                 String strResults="Weather\n";
                 for (int i = 0; i < dataArray1.length(); i++) {
                     JSONObject jsonObject = dataArray1.getJSONObject(i);
@@ -238,6 +240,7 @@ else {
                    */
 
                     //      strResults +="id: "+jsonObject.getString("id");
+                 //        strResults +="name: "+jsonObject.getString("name");
                     //      strResults +="\nmain: "+jsonObject.getString("main");
                     //       strResults +="\ndescription: "+jsonObject.getString("description");
 
@@ -260,7 +263,10 @@ else {
                 strResults +="\nlon: "+dataObject1.getString("lon");
                 strResults +="\nlat: "+dataObject1.getString("lat");
                 strResults +="\nzip: "+latitude;
+              // dataObject2= weatherJson.getString("name");
+           //     strResults +="\nname: "+dataObject2.;
 
+                JSONObject dataObject2= weatherJson.getJSONObject("name");
 
                 //  JSONObject dataObject2= weatherJson.getJSONObject("name");
                 //  strResults +="\nname: "+dataObject2.

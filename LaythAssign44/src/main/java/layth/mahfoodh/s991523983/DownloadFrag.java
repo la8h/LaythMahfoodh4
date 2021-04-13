@@ -15,6 +15,7 @@ Layth Mahfoodh s991523983 PROG38448
  */
 
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -168,21 +169,53 @@ public  class DownloadFrag extends Fragment{ //} implements OnMapReadyCallback{
         View view = inflater.inflate(R.layout.frag_download, container, false);
 
         final Spinner spin = (Spinner) view.findViewById(R.id.provinces_spinner);
+
+
+
         //create a button object
         final Button submit = (Button)view.findViewById(R.id.submit);
 
         imageView=view.findViewById(R.id.imageView2);
 
+
+/*
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinner_images);
+           spin.setAdapter(adapter);
+*/
+
         //handle the  click event
         submit.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                AsyncTaskExample asyncTask=new AsyncTaskExample();
-                asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");
 
-
-                //get the spinner view as text view
                 TextView text_sel = (TextView)spin.getSelectedView();
+
+
+                AsyncTaskExample asyncTask=new AsyncTaskExample();
+
+                if (text_sel.getText()=="British Columbia") {
+                    asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");
+                }else if(text_sel.getText()=="Alberta") {
+                    asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");}
+                else{
+                    asyncTask.execute("https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg");
+                }
+
+
+
+
+
+
+
+            //    asyncTask.execute("https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg");
+//https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg
+                //get the spinner view as text view
+
+
+           //     TextView text_sel = (TextView)spin.getSelectedView();
+
+
                 //get the text from the spinner view
            //     Toast.GalleryFragment.this, "\n Province = "+text_sel.getText(), Toast.LENGTH_SHORT).show();
            //     Toast.makeText(GalleryFragment.this, "\n Province = "+text_sel.getText(), Toast.LENGTH_SHORT).show();

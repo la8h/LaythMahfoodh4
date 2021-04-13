@@ -266,7 +266,7 @@ else {
               // dataObject2= weatherJson.getString("name");
            //     strResults +="\nname: "+dataObject2.;
 
-            //    JSONObject dataObject2= weatherJson.getJSONObject("name");
+           //     JSONObject dataObject2= weatherJson.getJSONObject("name");
 
                 //  JSONObject dataObject2= weatherJson.getJSONObject("name");
                 //  strResults +="\nname: "+dataObject2.

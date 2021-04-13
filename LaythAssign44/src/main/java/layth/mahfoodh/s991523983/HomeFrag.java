@@ -103,7 +103,7 @@ public class HomeFrag extends Fragment {
 
 
         // Create the next level button, which tries to show an interstitial when clicked.
-//        mNextLevelButton = view.findViewById(R.id.next_level_button);
+        mNextLevelButton = view.findViewById(R.id.next_level_button);
 
         // Create the text view to show the level number.
         mLevelTextView = view.findViewById(R.id.tvLayth);
@@ -116,20 +116,26 @@ public class HomeFrag extends Fragment {
         if (getActivity() == null || getActivity().getApplicationContext() == null) return;
         final Context appContext = getActivity().getApplicationContext();
 
+        /*
         mNextLevelButton.setEnabled(false);
         mNextLevelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showInterstitial(appContext);
             }
-        });
+          */
+
+
+//*        });
+
+/*
         // Create the InterstitialAd and set the adUnitId (defined in values/strings.xml).
         mInterstitialAd = newInterstitialAd(appContext);
         loadInterstitial();
         // Toasts the test ad message on the screen.
         // Remove this after defining your own ad unit ID.
-        Toast.makeText(appContext, TOAST_TEXT, Toast.LENGTH_LONG).show();
-
+   //     Toast.makeText(appContext, TOAST_TEXT, Toast.LENGTH_LONG).show();
+*/
 
 
 
@@ -140,6 +146,9 @@ public class HomeFrag extends Fragment {
 
     }
 
+
+
+    /*
     private InterstitialAd newInterstitialAd(final Context context) {
         InterstitialAd interstitialAd = new InterstitialAd(context);
         interstitialAd.setAdUnitId(getString(R.string.my_name));
@@ -187,4 +196,8 @@ public class HomeFrag extends Fragment {
         mInterstitialAd = newInterstitialAd(context);
         loadInterstitial();
     }
+
+    */
+
+
 }

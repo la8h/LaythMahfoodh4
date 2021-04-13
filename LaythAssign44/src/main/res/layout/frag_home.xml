@@ -8,7 +8,7 @@
     tools:context=".HomeFrag">
 
     <!-- view for AdMob Interstitial Ad -->
-    <Button
+    <!--   <Button
         android:id="@+id/next_level_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLayth" />
+        app:layout_constraintTop_toBottomOf="@id/tvLayth" /> -->
 
     <TextView
         android:id="@+id/tvLayth"
@@ -24,44 +24,45 @@
         android:layout_height="wrap_content"
         android:text="@string/my_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintBottom_toTopOf="@id/next_level_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvN991523983" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/date_time"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/date_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
 
     <TextView
         android:id="@+id/tvN991523983"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/s_num"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintBottom_toTopOf="@id/tvLayth"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/tvLayth"
+        app:layout_constraintVertical_bias="0.145" />
 
     <TextView
         android:id="@+id/date_time"
-        android:layout_width="357dp"
-        android:layout_height="38dp"
+        android:layout_width="419dp"
+        android:layout_height="15dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.093" />
 
-  <!--  <TextView
-        android:id="@+id/time"
-        android:layout_width="222dp"
-        android:layout_height="39dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" /> -->
+    <!--  <TextView
+          android:id="@+id/time"
+          android:layout_width="222dp"
+          android:layout_height="39dp"
+          android:text="TextView"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.042"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.098" /> -->
 </androidx.constraintlayout.widget.ConstraintLayout>

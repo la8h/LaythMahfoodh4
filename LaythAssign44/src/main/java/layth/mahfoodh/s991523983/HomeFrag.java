@@ -103,7 +103,7 @@ public class HomeFrag extends Fragment {
 
 
         // Create the next level button, which tries to show an interstitial when clicked.
-        mNextLevelButton = view.findViewById(R.id.next_level_button);
+//        mNextLevelButton = view.findViewById(R.id.next_level_button);
 
         // Create the text view to show the level number.
         mLevelTextView = view.findViewById(R.id.tvLayth);

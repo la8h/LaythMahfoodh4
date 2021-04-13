@@ -193,16 +193,19 @@ public  class DownloadFrag extends Fragment{ //} implements OnMapReadyCallback{
 
 
                 AsyncTaskExample asyncTask=new AsyncTaskExample();
-
+               asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");
+/*
                 if (text_sel.getText()=="British Columbia") {
                     asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");
-                }else if(text_sel.getText()=="Alberta") {
+                } else if(text_sel.getText()=="Alberta") {
                     asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");}
-                else{
-                    asyncTask.execute("https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg");
+                  else{
+                    asyncTask.execute("https://www.tutorialspoint.com/images/tp-logo-diamond.png");
+
+                    //("https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg")
                 }
-
-
+*/
+System.out.println(text_sel.getText()+"------------------------");
 
 
 

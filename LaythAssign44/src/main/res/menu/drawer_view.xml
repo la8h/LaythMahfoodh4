@@ -11,18 +11,18 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_baseline_assignment_returned_24"
             android:title="@string/download_page" />
-        <item
+   <!--     <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_baseline_landscape_24"
-            android:title="@string/slideshow" />
+            android:title="@string/slideshow" /> -->
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_baseline_landscape_24"
             android:title="@string/webservice_page" />
-        <item
+ <!--       <item
             android:id="@+id/nav_renew"
             android:icon="@drawable/ic_baseline_landscape_24"
-            android:title="@string/Optins2" />
+            android:title="@string/Optins2" /> -->
 
     </group>
 </menu>

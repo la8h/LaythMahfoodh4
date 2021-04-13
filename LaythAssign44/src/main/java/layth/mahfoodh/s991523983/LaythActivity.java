@@ -25,7 +25,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-import layth.mahfoodh.s991523983.ui.login.LoginFragment;
+//import layth.mahfoodh.s991523983.ui.login.LoginFragment;
 
 public class LaythActivity extends AppCompatActivity {
 
@@ -81,7 +81,7 @@ public class LaythActivity extends AppCompatActivity {
                                 fragmentClass = WebServiceFrag.class;
                                 break;
                             default:
-                                fragmentClass = LoginFragment.class;
+             //                   fragmentClass = LoginFragment.class;
                         }
 
                         try {
